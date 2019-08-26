@@ -18,6 +18,9 @@ export class AppComponent {
     }
   }
   ChangeSearsh($event: KeyboardEvent) {
+    if ($event.key === 'Escape') {
+      $event.target.value = '';
+    }
     this.words = $event.target.value.length;
   }
 }
